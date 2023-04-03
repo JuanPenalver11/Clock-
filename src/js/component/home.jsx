@@ -4,23 +4,18 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
 
-export default Home;
+function Secundero(props) {
+	return (
+	  <div className="counterHolder">
+		<div className="calendar">
+		  <i class="fa-regular fa-clock"></i>
+		</div>
+		<div className="days"><h1>Days</h1>{props.digitDays}</div>
+		<div className="hours"><h1>Hours</h1>{props.digitHours}</div>
+		<div className="minutes"><h1>Minutes</h1>{props.digitMinutes}</div>
+		<div className="seconds"><h1>Seconds</h1>{props.digitSeconds}</div>
+	  </div>
+	);
+  }
+export default Secundero;
